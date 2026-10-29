@@ -87,7 +87,7 @@ const recipes = {
 
   "madelaines": {
     title: "Madelaines",
-    category: "baking",
+    category: "Baking",
     time: "15 minutes",
     servings: "6 persones",
     description: "Fresh, homemade madelaines.",
