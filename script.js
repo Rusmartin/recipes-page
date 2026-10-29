@@ -83,8 +83,9 @@ const recipes = {
       "Stir lemon juice into the yogurt and season to taste.",
       "Serve the crispy chickpeas over cucumber and tomatoes with the yogurt sauce."
     ]
-  }
+  },
 
+  // REAL RECIPE 1.
   "madelaines": {
     title: "Madelaines",
     category: "Baking",
