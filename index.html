@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Recipe Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">OUR LITTLE KITCHEN</p>
+      <h1>Our Recipe Book <span aria-hidden="true">♡</span></h1>
+      <p class="subtitle">Good food, favourite recipes, made together.</p>
+    </div>
+  </header>
+
+  <p class="eyebrow">testing</p>
+  
+  <main class="page">
+    <section class="toolbar" aria-label="Find recipes">
+      <label class="search-box">
+        <span class="visually-hidden">Search recipes</span>
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search recipes or ingredients...">
+      </label>
+
+      <!-- Add a new category here if you add it to a recipe card below. -->
+      <div class="filters" id="categoryFilters" aria-label="Filter by category">
+        <button class="filter active" data-category="All">All recipes</button>
+        <button class="filter" data-category="Chicken">Chicken</button>
+        <button class="filter" data-category="Pasta">Pasta</button>
+        <button class="filter" data-category="Vegetarian">Vegetarian</button>
+        <button class="filter" data-category="High Protein">High protein</button>
+      </div>
+    </section>
+
+    <section class="section-heading">
+      <div>
+        <p class="eyebrow">YOUR COLLECTION</p>
+        <h2>Recipes we love</h2>
+      </div>
+      <p id="recipeCount" class="recipe-count">0 recipes</p>
+    </section>
+
+    <section id="recipeGrid" class="recipe-grid" aria-live="polite">
+
+      <!-- =========================================================
+           RECIPE TEMPLATE — COPY THIS WHOLE BLOCK TO ADD A RECIPE
+           1. Copy from <article class="recipe-card"...> to </article>.
+           2. Paste it below the other recipe cards.
+           3. Change the title, category, time, description, ingredients
+              and instructions.
+           4. Keep data-category as one category name.
+           5. Use a unique id on the button, e.g. id="open-my-recipe".
+           ========================================================= -->
+
+      <article class="recipe-card"
+        data-category="Pasta"
+        data-search="lemon spinach pasta lemon spinach garlic parmesan vegetarian">
+        <div class="card-art pasta-art" aria-hidden="true"><span>🍋</span></div>
+        <div class="card-content">
+          <div class="card-meta"><span class="category-tag">Pasta</span><span>20 min</span></div>
+          <h3>Lemon & Spinach Pasta</h3>
+          <p class="card-description">Fresh, creamy, bright and easy enough for a weeknight.</p>
+          <button class="text-button" id="open-lemon-pasta" onclick="openRecipe('lemon-pasta')">View recipe <span aria-hidden="true">→</span></button>
+        </div>
+      </article>
+
+      <!-- EXAMPLE RECIPE 2: replace this sample with one of your own if you like. -->
+      <article class="recipe-card"
+        data-category="Chicken"
+        data-search="roasted chicken thighs green beans lemon garlic chicken">
+        <div class="card-art chicken-art" aria-hidden="true"><span>🍗</span></div>
+        <div class="card-content">
+          <div class="card-meta"><span class="category-tag">Chicken</span><span>35 min</span></div>
+          <h3>Garlic Roasted Chicken</h3>
+          <p class="card-description">Juicy chicken thighs with garlic, lemon and herbs.</p>
+          <button class="text-button" id="open-chicken" onclick="openRecipe('chicken')">View recipe <span aria-hidden="true">→</span></button>
+        </div>
+      </article>
+
+      <!-- EXAMPLE RECIPE 3: a vegetarian idea. -->
+      <article class="recipe-card"
+        data-category="Vegetarian"
+        data-search="crispy chickpea bowl cucumber tomato yogurt vegetarian">
+        <div class="card-art veggie-art" aria-hidden="true"><span>🥗</span></div>
+        <div class="card-content">
+          <div class="card-meta"><span class="category-tag">Vegetarian</span><span>25 min</span></div>
+          <h3>Crispy Chickpea Bowl</h3>
+          <p class="card-description">A colourful bowl with crunchy chickpeas and a quick sauce.</p>
+          <button class="text-button" id="open-chickpeas" onclick="openRecipe('chickpeas')">View recipe <span aria-hidden="true">→</span></button>
+        </div>
+      </article>
+
+      <!-- =========================================================
+           ADD YOUR NEW RECIPE CARDS ABOVE THIS COMMENT.
+           Each card's button must call openRecipe('your-recipe-id').
+           Then add a matching recipe object in the recipes list in
+           script.js (instructions are in that file).
+           ========================================================= -->
+
+    </section>
+
+    <p id="emptyState" class="empty-state" hidden>No recipes found. Try another search or category.</p>
+
+    <aside class="tip-box">
+      <span class="tip-icon" aria-hidden="true">✎</span>
+      <div>
+        <h3>Your recipe book, your rules</h3>
+        <p>To add a recipe, open <strong>index.html</strong> and copy the commented recipe-card template. Then add its ingredients and method in <strong>script.js</strong>. A short guide is included in the project folder.</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Recipe detail modal: JavaScript fills this with the selected recipe. -->
+  <dialog id="recipeDialog" class="recipe-dialog">
+    <button class="close-dialog" id="closeDialog" aria-label="Close recipe">×</button>
+    <div id="recipeDetails"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    Made with love, for the meals worth making again. <span aria-hidden="true">♡</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
