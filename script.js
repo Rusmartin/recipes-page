@@ -85,6 +85,30 @@ const recipes = {
     ]
   }
 
+  "madelaines": {
+    title: "Madelaines",
+    category: "baking",
+    time: "15 minutes",
+    servings: "6 persones",
+    description: "Fresh, homemade madelaines.",
+    ingredients: [
+      "90g of flour",
+      "75g of sugar",
+      "60 of melted butter",
+      "2.3 eggs",
+      "0.3 bag of instant yeast",
+      "0.8 pinch of salt",
+      "2-3 drop of vanilla extract"
+    ],
+    method: [
+      "Heat the oven to 170°C (340°F).",
+      "In a big bowl whisk the eggs with the sugar. Add the flour, the yeast, the melted butter, and the vanilla extract and continue to whish until smooth. ",
+      "Fill up your mold.",
+      "Cook for 10 minutes.",
+      "Let cool down and eat."
+    ]
+  }
+
   /*
   COPY THIS OBJECT TO ADD A RECIPE:
   Remember to put a comma after the previous recipe's closing }.
